@@ -3,8 +3,9 @@ export function menuItemsData(newGreed)  {
     const baseUrlQuery = 'https://query-gra-hyx2izic7a-uc.a.run.app'
     const baseUrlDSV = 'https://dsv-hyx2izic7a-uc.a.run.app'
     // const host = window.location.origin
-    const git_menu_edit = 'https://github.com/borisgra/cors/edit/main/menu-git.js'
-    const git_menu_raw = 'raw.githubusercontent.com/borisgra/cors/refs/heads/main'
+    const git_menu_edit = 'https://github.com/borisgra/menus'
+    const git_page_menus = 'https://borisgra.github.io/menus'
+    const git_menu_raw = 'raw.githubusercontent.com/borisgra/menus/refs/heads/main'  // Depricated !
     const google_menu = 'https://console.cloud.google.com/storage/browser/public-menu'
     return  {
         label: 'menu',
@@ -88,10 +89,15 @@ export function menuItemsData(newGreed)  {
                 ],
             },
             {
-                label: 'menu second',
+                label: 'menu second (local)',
                 callback: () => open('?menu=menu-second.js', "_self"),
                 sx: {color: '#FF0000',bgcolor: '#c6ecc6'},
             },
+            {
+                label: `menu-git from ${git_page_menus}`,
+                callback: () => open(`?menu=${git_page_menus}/menu-git.js`, "_self"),
+                sx: {color: '#FF0000',bgcolor: '#c6ecc6'},
+            },            
             {
                 label: 'Services',
                 sx: defColor,
@@ -107,10 +113,10 @@ export function menuItemsData(newGreed)  {
                         sx: {color: 'braun',bgcolor: '#c6ecc6'},
                     },
                     {
-                        label: 'add new menu on site from git',
+                        label: 'add new menu on site from git (RAW)',
                         callback: () => open(`/save/?url=https://${git_menu_raw}/menu-git.js`, ""),
                         sx: {color: '#e600e6', bgcolor: '#c6ecc6'},
-                    },
+                    },                   
                     {
                         label: 'edit menu on git',
                         callback: () => open(git_menu_edit, ""),
