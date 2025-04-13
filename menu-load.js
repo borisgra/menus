@@ -6,7 +6,7 @@ export function menuItemsData(newGreed)  {
     const git_menu_edit = 'https://github.com/borisgra/menus'
     const git_page_menus = 'https://borisgra.github.io/menus'
     const git_menu_raw = 'raw.githubusercontent.com/borisgra/menus/refs/heads/main'  // Depricated !
-    const google_menu = 'https://console.cloud.google.com/storage/browser/public-menu'
+    const google_menu = 'https://storage.googleapis.com/public-menu'
     return  {
         label: 'menu',
         items: [
@@ -173,7 +173,7 @@ export function menuItemsData(newGreed)  {
                     },
                     {
                         label: 'add new menu on site from Google',
-                        callback: () => open('/save/?url=${google_menu}/menu-gra1.js', ""),
+                        callback: () => open(`/save/?url=${google_menu}/menu-gra1.js`, ""),
                         sx: {color: '#b38600', bgcolor: '#c6ecc6'},
                     },
                 ]
