@@ -134,7 +134,7 @@ export function menuItemsData(newGreed)  {
             },
             {
                 label: `menu-git from ${git_page_menus}`,
-                callback: () => open(`?menu=${git_page_menus}/menu-git.js`, "_self"),
+                callback: () => open(`?menu=${git_page_menus}/menu-host.js`, "_self"),
                 sx: {color: '#FF0000',bgcolor: '#c6ecc6'},
             },   
             {
