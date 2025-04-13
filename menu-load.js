@@ -136,7 +136,12 @@ export function menuItemsData(newGreed)  {
                 label: `menu-git from ${git_page_menus}`,
                 callback: () => open(`?menu=${git_page_menus}/menu-git.js`, "_self"),
                 sx: {color: '#FF0000',bgcolor: '#c6ecc6'},
-            },            
+            },   
+            {
+                label: `menu-git from Google Bucket`,
+                callback: () => open('?menu=https://storage.googleapis.com/public-menu/menu-gra1.js', "_self"),
+                sx: {color: '#FF0000',bgcolor: '#c6ecc6'},
+            },              
             {
                 label: 'Services',
                 sx: defColor,
@@ -168,7 +173,7 @@ export function menuItemsData(newGreed)  {
                     },
                     {
                         label: 'add new menu on site from Google',
-                        callback: () => open('/save/?url=https://storage.googleapis.com/public-menu/menu-gra.js', ""),
+                        callback: () => open('/save/?url=https://storage.googleapis.com/public-menu/menu-gra1.js', ""),
                         sx: {color: '#b38600', bgcolor: '#c6ecc6'},
                     },
                 ]
