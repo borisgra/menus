@@ -26,6 +26,45 @@ export function menuItemsData(newGreed)  {
                 sx: defColor
             },
             {
+                label: 'Jsonplaceholder)', // https://jsonplaceholder.typicode.com/
+                sx: defColor,
+                items: [
+                    {
+                        label: 'users',
+                        callback: (_, item) => newGreed("https://jsonplaceholder.typicode.com/users", item.label),
+                        sx: defColor
+                    },
+                    {
+                        label: 'posts',
+                        callback: (_, item) => newGreed("https://jsonplaceholder.typicode.com/posts", item.label),
+                        sx: defColor
+                    },
+                    {
+                        label: 'comments',
+                        callback: (_, item) => newGreed("https://jsonplaceholder.typicode.com/comments", item.label),
+                        sx: defColor
+                    },
+                    {
+                        label: 'albums',
+                        callback: (_, item) => newGreed("https://jsonplaceholder.typicode.com/albums", item.label),
+                        sx: defColor
+                    },
+                    {
+                        label: 'photos',
+                        callback: (_, item) => newGreed("https://jsonplaceholder.typicode.com/photos", item.label),
+                        sx: defColor,
+                        disabled: false,
+                    },
+                    {
+                        label: 'todos',
+                        callback: (_, item) => newGreed("https://jsonplaceholder.typicode.com/todos", item.label),
+                        sx: defColor,
+                        disabled: false,
+                    },
+                ],
+            },
+            
+            {
                 label: 'Soundproofing)',
                 sx: defColor,
                 delay: 300,
