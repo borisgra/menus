@@ -139,7 +139,7 @@ export function menuItemsData(newGreed)  {
             },   
             {
                 label: `menu-git from Google Bucket`,
-                callback: () => open('?menu=${google_menu}/menu-gra1.js', "_self"),
+                callback: () => open(`?menu=${google_menu}/menu-gra1.js`, "_self"),
                 sx: {color: '#FF0000',bgcolor: '#c6ecc6'},
             },              
             {
