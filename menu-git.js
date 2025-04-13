@@ -5,7 +5,6 @@ export function menuItemsData(newGreed)  {
 //     const localUrlQuery = 'http://localhost'
     const git_page_menus = 'https://borisgra.github.io/menus'
     const git_menu_edit = 'https://github.com/borisgra/menus'
-    const git_page_menus = 'https://borisgra.github.io/menus'
     return  {
         label: 'menu',
         items: [
