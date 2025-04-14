@@ -3,7 +3,7 @@ export function menuItemsData(newGreed)  {
     const host = window.location.origin
 //    console.log(`host=${host}`)
 //     const localUrlQuery = 'http://localhost'
-    const git_page_menus = 'https://borisgra.github.io/menus'
+    const git_menu_raw = 'raw.githubusercontent.com/borisgra/menus/refs/heads/main'  // Depricated !
     const git_menu_edit = 'https://github.com/borisgra/menus'
     return  {
         label: 'menu',
@@ -82,9 +82,9 @@ export function menuItemsData(newGreed)  {
                 sx: {color: 'braun',bgcolor: '#c6ecc6'},
             },
             {
-                label: 'add new menu on site  (flask)',
-                callback: () => open(`/save/?url=https://${git_menu_raw}/menu-git.js`, ""),
-                sx: {color: '#ff66ff',bgcolor: '#c6ecc6'},
+                label: 'add new menu on site from git RAW (flask)',
+                callback: () => open(`/save/?url=https://${git_menu_raw}/menu-host.js`, ""),
+                sx: {color: '#e600e6', bgcolor: '#c6ecc6'},
             },
             {
                 label: 'edit menu on git',
