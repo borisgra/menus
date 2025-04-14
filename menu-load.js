@@ -63,7 +63,7 @@ export function menuItemsData(newGreed)  {
                     },
                 ],
             },
-            
+
             {
                 label: 'Soundproofing)',
                 sx: defColor,
@@ -136,31 +136,31 @@ export function menuItemsData(newGreed)  {
                 label: `menu-host from github`,
                 callback: () => open(`?menu=${git_page_menus}/menu-host.js`, "_self"),
                 sx: {color: '#FF0000',bgcolor: '#c6ecc6'},
-            },   
+            },
             {
                 label: `menu-gra1 from Google Bucket`,
                 callback: () => open(`?menu=${google_menu}/menu-gra1.js`, "_self"),
                 sx: {color: '#FF0000',bgcolor: '#c6ecc6'},
-            },              
+            },
             {
                 label: 'Services',
                 sx: defColor,
                 items: [
                     {
-                        label: 'list menu on site',
+                        label: 'list menu on site (flask)',
                         callback: () => open('/save/', ""),
                         sx: {color: 'braun', bgcolor: '#c6ecc6'},
                     },
                     {
                         label: 'Look menu on site',
-                        callback: () => open('/menus/menu-git.js', ""),
+                        callback: () => open('/menus/menu-host.js', ""),
                         sx: {color: 'braun',bgcolor: '#c6ecc6'},
                     },
                     {
-                        label: 'add new menu on site from git (RAW)',
-                        callback: () => open(`/save/?url=https://${git_menu_raw}/menu-host.js`, ""),
+                        label: 'add new menu on site from git RAW (flask)',
+                        callback: () => open(`/save/?url=https://${git_menu_raw}/menu-git.js`, ""),
                         sx: {color: '#e600e6', bgcolor: '#c6ecc6'},
-                    },                   
+                    },
                     {
                         label: 'edit menu on git',
                         callback: () => open(git_menu_edit, ""),
@@ -172,7 +172,7 @@ export function menuItemsData(newGreed)  {
                         sx: {color: '#b38600', bgcolor: '#c6ecc6'},
                     },
                     {
-                        label: 'add new menu on site from Google',
+                        label: 'add new menu on site from Google (flask)',
                         callback: () => open(`/save/?url=${google_menu}/menu-gra1.js`, ""),
                         sx: {color: '#b38600', bgcolor: '#c6ecc6'},
                     },
