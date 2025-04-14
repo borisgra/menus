@@ -158,7 +158,7 @@ export function menuItemsData(newGreed)  {
                     },
                     {
                         label: 'add new menu on site from git (RAW)',
-                        callback: () => open(`/save/?url=https://${git_menu_raw}/menu-git.js`, ""),
+                        callback: () => open(`/save/?url=https://${git_menu_raw}/menu-host.js`, ""),
                         sx: {color: '#e600e6', bgcolor: '#c6ecc6'},
                     },                   
                     {
