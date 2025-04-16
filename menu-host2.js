@@ -3,6 +3,7 @@ export function menuItemsData(newGreed)  {
     const host = window.location.origin
 //    console.log(`host=${host}`)
 //     const localUrlQuery = 'http://localhost'
+    const baseUrlQuery = 'https://query-gra-hyx2izic7a-uc.a.run.app'
     const git_menu_raw = 'raw.githubusercontent.com/borisgra/menus/refs/heads/main'  // Depricated !
     const git_menu_edit = 'https://github.com/borisgra/menus'
     return  {
@@ -20,7 +21,7 @@ export function menuItemsData(newGreed)  {
             },
             {
                 label: 'Without Clients (supabase)',
-                callback: (_, item) => newGreed(`${host}/bd/supabase/jsonPG/public.v_persons/ and status <> 'client'`, item.label),
+                callback: (_, item) => newGreed(`${baseUrlQuery}/bd/supabase/jsonPG/public.v_persons/ and status <> 'client'`, item.label),
                 sx: defColor
             },
             {
