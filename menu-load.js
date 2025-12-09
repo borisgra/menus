@@ -18,12 +18,12 @@ export function menuItemsData(newGreed)  {
             },
             {
                 label: 'Clients query',
-                callback: (_, item) => newGreed(`${baseUrlQuery}/bd/supabase/jsonPG/public.v_persons/ and status <> 'client'`, item.label),
+                callback: (_, item) => newGreed(`${baseUrlQuery}/bd/neon/jsonPG/public.v_persons/ and status <> 'client'`, item.label),
                 sx: defColor
             },
             {
                 label: 'Clients dsv',
-                callback: (_, item) => newGreed(`${baseUrlQuery}/bd/supabase/jsonPG/public.v_persons/ and status <> 'client'`, item.label),
+                callback: (_, item) => newGreed(`${baseUrlQuery}/bd/neon/jsonPG/public.v_persons/ and status <> 'client'`, item.label),
                 sx: defColor
             },
             {
@@ -182,3 +182,4 @@ export function menuItemsData(newGreed)  {
         ],
     }
 }
+
