@@ -1,7 +1,8 @@
 export function menuItemsData(newGreed)  {
     const defColor = {color: '#0033cc',bgcolor: '#c6ecc6'}
     const baseUrlQuery = 'https://query-gra-hyx2izic7a-uc.a.run.app'
-    const baseUrlDSV = 'https://dsv-hyx2izic7a-uc.a.run.app'
+   // const baseUrlDSV = 'https://dsv-hyx2izic7a-uc.a.run.app'
+    const baseUrlDSV = 'http://boris-gra.xyz:5003'
     // const host = window.location.origin
     const jsonplaceholder = 'https://jsonplaceholder.typicode.com/todos'
     const git_menu_edit = 'https://github.com/borisgra/menus'
