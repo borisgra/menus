@@ -3,6 +3,7 @@ export function menuItemsData(newGreed)  {
     const baseUrlQuery = 'https://query-gra-hyx2izic7a-uc.a.run.app'
     const baseUrlDSV = 'https://dsv-hyx2izic7a-uc.a.run.app'
     // const host = window.location.origin
+    const jsonplaceholder = 'https://jsonplaceholder.typicode.com/todos'
     const git_menu_edit = 'https://github.com/borisgra/menus'
     const git_page_menus = 'https://borisgra.github.io/menus'
     const git_menu_raw = 'raw.githubusercontent.com/borisgra/menus/refs/heads/main'  // Depricated !
@@ -27,7 +28,7 @@ export function menuItemsData(newGreed)  {
                 sx: defColor
             },
             {
-                label: 'Jsonplaceholder)', // https://jsonplaceholder.typicode.com/
+                label: 'Jsonplaceholder)', // jsonplaceholder
                 sx: defColor,
                 items: [
                     {
@@ -37,28 +38,28 @@ export function menuItemsData(newGreed)  {
                     },
                     {
                         label: 'posts',
-                        callback: (_, item) => newGreed("https://jsonplaceholder.typicode.com/posts", item.label),
+                        callback: (_, item) => newGreed("${jsonplaceholder}/posts", item.label),
                         sx: defColor
                     },
                     {
                         label: 'comments',
-                        callback: (_, item) => newGreed("https://jsonplaceholder.typicode.com/comments", item.label),
+                        callback: (_, item) => newGreed("${jsonplaceholder}/comments", item.label),
                         sx: defColor
                     },
                     {
                         label: 'albums',
-                        callback: (_, item) => newGreed("https://jsonplaceholder.typicode.com/albums", item.label),
+                        callback: (_, item) => newGreed("${jsonplaceholder}/albums", item.label),
                         sx: defColor
                     },
                     {
                         label: 'photos',
-                        callback: (_, item) => newGreed("https://jsonplaceholder.typicode.com/photos", item.label),
+                        callback: (_, item) => newGreed("${jsonplaceholder}/photos", item.label),
                         sx: defColor,
                         disabled: false,
                     },
                     {
                         label: 'todos',
-                        callback: (_, item) => newGreed("https://jsonplaceholder.typicode.com/todos", item.label),
+                        callback: (_, item) => newGreed("${jsonplaceholder}/todos", item.label),
                         sx: defColor,
                         disabled: false,
                     },
