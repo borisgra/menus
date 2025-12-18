@@ -1,8 +1,8 @@
 export function menuItemsData(newGreed)  {
     const defColor = {color: '#0033cc',bgcolor: '#c6ecc6'}
    // const baseUrlQuery = 'https://query-gra-hyx2izic7a-uc.a.run.app'
-   // const baseUrlDSV = 'https://dsv-hyx2izic7a-uc.a.run.app'
-    const baseUrlDSV = 'http://boris-gra.xyz:5003'
+   // const baseUrlLOCAL = 'https://dsv-hyx2izic7a-uc.a.run.app'
+    const baseUrlLOCAL = 'http://boris-gra.xyz:5003'
     const baseUrlQuery = 'https://query.boris-gra.xyz'
     // const host = window.location.origin
     const jsonplaceholder = 'https://jsonplaceholder.typicode.com/todos'
@@ -25,8 +25,8 @@ export function menuItemsData(newGreed)  {
                 sx: defColor
             },
             {
-                label: 'Clients dsv',
-                callback: (_, item) => newGreed(`${baseUrlDSV}/bd/koyeb_querys/jsonPG/public.v_persons/ and status <> 'client'`, item.label),
+                label: 'Clients local',
+                callback: (_, item) => newGreed(`${baseUrlLOCAL}/bd/koyeb_querys/jsonPG/public.v_persons/ and status <> 'client'`, item.label),
                 sx: defColor
             },
             {
@@ -84,13 +84,13 @@ export function menuItemsData(newGreed)  {
                         sx: defColor
                     },
                     {
-                        label: 'Month (dsv)',
-                        callback: (_, item) => newGreed(`${baseUrlDSV}/bd/daas_nma/jsonPG/v_history/ and  date(write_date)>=cast(TO_CHAR(NOW(), 'yyyy-mm-01')as date) order by id desc`, item.label),
+                        label: 'Month (local)',
+                        callback: (_, item) => newGreed(`${baseUrlLOCAL}/bd/daas_nma/jsonPG/v_history/ and  date(write_date)>=cast(TO_CHAR(NOW(), 'yyyy-mm-01')as date) order by id desc`, item.label),
                         sx: defColor
                     },
                     {
-                        label: 'Today  (dsv)',
-                        callback: (_, item) => newGreed(`${baseUrlDSV}/bd/daas_nma/jsonPG/v_history/ and  date(write_date)=current_date  order by id desc`, item.label),
+                        label: 'Today  (local)',
+                        callback: (_, item) => newGreed(`${baseUrlLOCAL}/bd/daas_nma/jsonPG/v_history/ and  date(write_date)=current_date  order by id desc`, item.label),
                         sx: defColor
                     },
                     {
@@ -121,6 +121,18 @@ export function menuItemsData(newGreed)  {
                                 sx: defColor,
                                 disabled: false,
                             },
+                            {
+                                label: 'Country codes (local)',
+                                callback: (_, item) => newGreed(`${baseUrlLOCAL}/bd/vpn-gra/jsonPG/bigquery-public-data.country_codes.country_codes`, item.label),
+                                sx: defColor,
+                                disabled: false,
+                            },
+                            {
+                                label: 'Country codes start "A" (local)',
+                                callback: (_, item) => newGreed(`${baseUrlLOCAL}/bd/vpn-gra/jsonPG/bigquery-public-data.country_codes.country_codes / and starts_with(alpha_2_code,'A')`, item.label),
+                                sx: defColor,
+                                disabled: false,
+                            },                            
                         ],
                     },
                     {
