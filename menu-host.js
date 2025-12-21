@@ -94,8 +94,8 @@ export function menuItemsData(newGreed)  {
                         sx: defColor
                     },
                     {
-                        label: 'Year (working)',
-                        callback: (_, item) => newGreed(`${baseUrl}/bd/daas_nma/jsonPG/v_users_working/   and  date(date_last)>=cast(TO_CHAR(NOW(), 'yyyy-01-01') as date) order by tests_count desc `, item.label),
+                        label: 'Year working (local)',
+                        callback: (_, item) => newGreed(`${baseUrlLOCAL}/bd/daas_nma/jsonPG/v_users_working/   and  date(date_last)>=cast(TO_CHAR(NOW(), 'yyyy-01-01') as date) order by tests_count desc `, item.label),
                         sx: defColor,
                         disabled: false,
                     },
