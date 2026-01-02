@@ -3,7 +3,7 @@ export function menuItemsData(newGreed)  {
    // const baseUrlQuery = 'https://query-gra-hyx2izic7a-uc.a.run.app'
    // const baseUrlLOCAL = 'https://dsv-hyx2izic7a-uc.a.run.app'
    // const baseUrlLOCAL = 'http://boris-gra.xyz:5003'
-    const baseUrlLOCAL = window.location.origin
+    const baseUrlLOCAL = window.location.origin+'/query'
     const baseUrlQuery = 'https://query.boris-gra.xyz'
     // const host = window.location.origin
     const jsonplaceholder = 'https://jsonplaceholder.typicode.com/todos'
