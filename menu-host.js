@@ -10,7 +10,7 @@ export function menuItemsData(newGreed)  {
     else baseUrlLOCAL = baseUrlLOCAL.replace('greed.','query.').replace('greedm.','query.')
     console.log('baseUrlLOCAL='+baseUrlLOCAL)
     const baseUrlQuery = 'https://query.boris-gra.xyz'
-    // const host = window.location.origin
+    
     const jsonplaceholder = 'https://jsonplaceholder.typicode.com/todos'
     const git_menu_edit = 'https://github.com/borisgra/menus'
     const git_page_menus = 'https://borisgra.github.io/menus'
