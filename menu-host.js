@@ -5,8 +5,10 @@ export function menuItemsData(newGreed)  {
    // const baseUrlLOCAL = 'http://boris-gra.xyz:5003'
     const baseUrlLOCAL = window.location.origin  //+'/query'
     console.log('baseUrlLOCAL='+baseUrlLOCAL)
-    if (baseUrlLOCAL.search('/query') > -1) 
+    if (baseUrlLOCAL.search('greed') == -1 ) 
       baseUrlLOCAL = baseUrlLOCAL+'/query'
+    else baseUrlLOCAL = baseUrlLOCAL.replace('greed.','query.').replace('greedm.','query.')
+    console.log('baseUrlLOCAL='+baseUrlLOCAL)
     const baseUrlQuery = 'https://query.boris-gra.xyz'
     // const host = window.location.origin
     const jsonplaceholder = 'https://jsonplaceholder.typicode.com/todos'
