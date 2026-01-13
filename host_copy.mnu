@@ -2,15 +2,21 @@ export function menuItemsData(newGreed)  {
     const defColor = {color: '#0033cc',bgcolor: '#c6ecc6'}
    // const baseUrlQuery = 'https://query-gra-hyx2izic7a-uc.a.run.app'
    // const baseUrlLOCAL = 'https://dsv-hyx2izic7a-uc.a.run.app'
-    const baseUrlLOCAL = 'http://boris-gra.xyz:5003'
+   // const baseUrlLOCAL = 'http://boris-gra.xyz:5003'
+    var baseUrlLOCAL = window.location.origin  //+'/query'
+    console.log('baseUrlLOCAL='+baseUrlLOCAL)
+    if (baseUrlLOCAL.search('greed') == -1 ) 
+      baseUrlLOCAL = baseUrlLOCAL+'/query'
+    else baseUrlLOCAL = baseUrlLOCAL.replace('greed.','query.').replace('greedm.','query.')
+    console.log('baseUrlLOCAL='+baseUrlLOCAL)
     const baseUrlQuery = 'https://query.boris-gra.xyz'
     // const host = window.location.origin
     const jsonplaceholder = 'https://jsonplaceholder.typicode.com/todos'
     const git_menu_edit = 'https://github.com/borisgra/menus'
     const git_page_menus = 'https://borisgra.github.io/menus'
     const git_menu_raw = 'raw.githubusercontent.com/borisgra/menus/refs/heads/main'  // Depricated !
-    const google_menu = 'https://storage.googleapis.com/public-menu'
-    const google_menu_list = 'https://console.cloud.google.com/storage/browser/public-menu'
+    const google_menu = 'https://storage.googleapis.com/test-menu'
+    const google_menu_list = 'https://console.cloud.google.com/storage/browser/test-menu'
     return  {
         label: 'menu',
         items: [
@@ -94,8 +100,8 @@ export function menuItemsData(newGreed)  {
                         sx: defColor
                     },
                     {
-                        label: 'Year (working)',
-                        callback: (_, item) => newGreed(`${baseUrl}/bd/daas_nma/jsonPG/v_users_working/   and  date(date_last)>=cast(TO_CHAR(NOW(), 'yyyy-01-01') as date) order by tests_count desc `, item.label),
+                        label: 'Year working (local)',
+                        callback: (_, item) => newGreed(`${baseUrlLOCAL}/bd/daas_nma/jsonPG/v_users_working/   and  date(date_last)>=cast(TO_CHAR(NOW(), 'yyyy-01-01') as date) order by tests_count desc `, item.label),
                         sx: defColor,
                         disabled: false,
                     },
