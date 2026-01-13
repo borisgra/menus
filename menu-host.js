@@ -4,9 +4,9 @@ export function menuItemsData(newGreed)  {
    // const baseUrlLOCAL = 'https://dsv-hyx2izic7a-uc.a.run.app'
    // const baseUrlLOCAL = 'http://boris-gra.xyz:5003'
     const baseUrlLOCAL = window.location.origin  //+'/query'
-    console.log('baseUrlLOCAL='+baseUrlLOCAL
-  //  if (baseUrlLOCAL.search('/query') > -1) 
-  //    baseUrlLOCAL = baseUrlLOCAL+'/query'
+    console.log('baseUrlLOCAL='+baseUrlLOCAL)
+    if (baseUrlLOCAL.search('/query') > -1) 
+      baseUrlLOCAL = baseUrlLOCAL+'/query'
     const baseUrlQuery = 'https://query.boris-gra.xyz'
     // const host = window.location.origin
     const jsonplaceholder = 'https://jsonplaceholder.typicode.com/todos'
