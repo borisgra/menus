@@ -3,14 +3,15 @@ export function menuItemsData(newGreed)  {
    // const baseUrlQuery = 'https://query-gra-hyx2izic7a-uc.a.run.app'
    // const baseUrlLOCAL = 'https://dsv-hyx2izic7a-uc.a.run.app'
    // const baseUrlLOCAL = 'http://boris-gra.xyz:5003'
-    var baseUrlLOCAL = window.location.origin  //+'/query'
+    var baseUrlLOCAL = window.location.origin  
     console.log('baseUrlLOCAL='+baseUrlLOCAL)
     if (baseUrlLOCAL.search('greed') == -1 ) 
       baseUrlLOCAL = baseUrlLOCAL+'/query'
-    else baseUrlLOCAL = baseUrlLOCAL.replace('greed.','query.').replace('greedm.','query.')
-    console.log('baseUrlLOCAL='+baseUrlLOCAL)
-    const baseUrlQuery = 'https://query.boris-gra.xyz'
+    else if (baseUrlLOCAL.search('greedm.') > -1 )
+	 pass
+    else baseUrlLOCAL = baseUrlLOCAL.replace('greed.','query.')
     
+    const baseUrlQuery = 'https://query.boris-gra.xyz'
     const jsonplaceholder = 'https://jsonplaceholder.typicode.com/todos'
     const git_menu_edit = 'https://github.com/borisgra/menus'
     const git_page_menus = 'https://borisgra.github.io/menus'
