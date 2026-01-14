@@ -8,7 +8,7 @@ export function menuItemsData(newGreed)  {
     if (baseUrlLOCAL.search('greed') == -1 ) 
       baseUrlLOCAL = baseUrlLOCAL+'/query'
     else if (baseUrlLOCAL.search('greedm.') > -1 )
-	 pass
+	 ;
     else baseUrlLOCAL = baseUrlLOCAL.replace('greed.','query.')
     
     const baseUrlQuery = 'https://query.boris-gra.xyz'
