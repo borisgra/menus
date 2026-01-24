@@ -12,7 +12,7 @@ export function menuItemsData(newGreed)  {
     else baseUrlLOCAL = baseUrlLOCAL.replace('greed.','query.')
     
     const baseUrlQuery = 'https://query.boris-gra.xyz'
-    const jsonplaceholder = 'https://jsonplaceholder.typicode.com/todos'
+    const jsonplaceholder = 'https://jsonplaceholder.typicode.com'
     const git_menu_edit = 'https://github.com/borisgra/menus'
     const git_page_menus = 'https://borisgra.github.io/menus'
     const git_menu_raw = 'raw.githubusercontent.com/borisgra/menus/refs/heads/main'  // Depricated !
@@ -42,7 +42,7 @@ export function menuItemsData(newGreed)  {
                 items: [
                     {
                         label: 'users',
-                        callback: (_, item) => newGreed("https://jsonplaceholder.typicode.com/users", item.label),
+                        callback: (_, item) => newGreed("${jsonplaceholder}/users", item.label),
                         sx: defColor
                     },
                     {
