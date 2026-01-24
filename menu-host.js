@@ -42,33 +42,33 @@ export function menuItemsData(newGreed)  {
                 items: [
                     {
                         label: 'users',
-                        callback: (_, item) => newGreed("${jsonplaceholder}/users", item.label),
+                        callback: (_, item) => newGreed(`${jsonplaceholder}/users`, item.label),
                         sx: defColor
                     },
                     {
                         label: 'posts',
-                        callback: (_, item) => newGreed("${jsonplaceholder}/posts", item.label),
+                        callback: (_, item) => newGreed(`${jsonplaceholder}/posts`, item.label),
                         sx: defColor
                     },
                     {
                         label: 'comments',
-                        callback: (_, item) => newGreed("${jsonplaceholder}/comments", item.label),
+                        callback: (_, item) => newGreed(`${jsonplaceholder}/comments`, item.label),
                         sx: defColor
                     },
                     {
                         label: 'albums',
-                        callback: (_, item) => newGreed("${jsonplaceholder}/albums", item.label),
+                        callback: (_, item) => newGreed(`${jsonplaceholder}/albums`, item.label),
                         sx: defColor
                     },
                     {
                         label: 'photos',
-                        callback: (_, item) => newGreed("${jsonplaceholder}/photos", item.label),
+                        callback: (_, item) => newGreed(`${jsonplaceholder}/photos`, item.label),
                         sx: defColor,
                         disabled: false,
                     },
                     {
                         label: 'todos',
-                        callback: (_, item) => newGreed("${jsonplaceholder}/todos", item.label),
+                        callback: (_, item) => newGreed(`${jsonplaceholder}/todos`, item.label),
                         sx: defColor,
                         disabled: false,
                     },
